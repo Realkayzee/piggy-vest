@@ -1,0 +1,45 @@
+.main-app{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    padding: 0.6rem 1rem;
+    height: 60px;
+}
+.logo{
+    padding: 0rem 0;
+}
+.center{
+    justify-self: center;
+}
+.app-navbar{
+    background-color: rgb(24, 23, 23);
+    border-radius: 16px;
+    padding: 0.5rem 0.1rem;
+    width: 100%;
+}
+.connect{
+    justify-self: end;
+}
+.app-list{
+    display: flex;
+}
+.app-item{
+    list-style: none;
+}
+.app-link{
+    color: rgb(255, 255, 255, 0.7);
+    text-decoration: none;
+    padding: 0.7rem;
+}
+.app-link:hover{
+    color: white;
+}
+.app-link:focus{
+    background-color: black;
+    border-radius: 16px;
+}
+.connect-button{
+    background-color: rgb(24, 23, 23);
+    padding: 0.5rem;
+    border-radius: 16px;
+    color: rgb(255, 255, 255, 0.7);
+}

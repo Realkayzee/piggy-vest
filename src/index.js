@@ -1,17 +1,28 @@
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Tab from './tab';
+import Dashboard from './routes/Dashboard';
+import Leaderboard from './routes/Leaderboard';
+import SaveEther from './routes/SaveEther';
+import Stablecoin from './routes/Stablecoin';
+import { ChakraProvider } from '@chakra-ui/react'
+import "./index.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <div className='body'>
+    <ChakraProvider>
+      <BrowserRouter>
+        <Tab />
+        <Routes>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='leaderboard' element={<Leaderboard />} />
+          <Route path='saveether' element={<SaveEther />} />
+          <Route path='stablecoin' element={<Stablecoin />} />
+        </Routes>
+      </BrowserRouter>
+    </ChakraProvider>
+  </div>
+  
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
